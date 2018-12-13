@@ -1,0 +1,78 @@
+body{
+    background-color:aqua;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    background:black;
+    
+}
+#nav ul{ 
+ font-size:13px;
+ padding:20px 0;
+}
+#nav ul li{
+    text-transform:capitalize;
+    letter-spacing:3px;
+    color:#FFF;
+    list-style:none;
+}
+#nav ul li a{
+    color:#FFF;
+}
+.a{
+    text-align:center; 
+    margin:0 auto;
+    width:100%;
+    padding:55px;
+}
+#container{
+    width:550px;
+    margin:0 auto;
+    margin-top:12%;
+}
+#container form{
+    width:100%;
+    padding:30px;
+    border: 1px solid #f1f1f1;
+    background:white;
+    box-shadow:0 0 20px 0, 0 5px 5px 0;
+}
+#container h1{
+    width:36%;
+    margin:0 auto;
+    padding-bottom:12px;
+}
+#container input[type=submit]{
+    background-color:aqua;
+    color:white;
+    margin:7px 0;
+    padding:14px 15px;
+    border:none;
+    cursor:pointer;
+    width:100%;
+}
+#container input[type=text], textarea{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    display:inline-block;
+    box-sizing:border-box;
+}
+#post{
+    background:white;
+    width:550px;
+    margin:30px;
+}
+#post h2{ text-align:center;}
+#post p{
+font-family:'Open sans', sans-serif;
+}
+img{ width:100%;}
+.list-separator{
+    width:50%;
+    margin:15px auto;
+}

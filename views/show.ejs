@@ -1,0 +1,48 @@
+<% include partials/header.ejs %>
+
+<header>
+    <nav id="nav">
+        <ul>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="a">
+    <h1 id="titre">Posts</h1>
+</div>
+
+
+<form action="/posts/new" method="GET">
+    <input type="submit" value="New post" />
+</form>
+
+<%if(posts.length === 0){%>
+    <h1>No posts to show</h1>
+<%} else {%>
+    <%for(var p = 0; p < posts.length; p++){%>
+        <div id="p">
+            <div id="post">
+                <h2><%=posts[p].title%></h2>
+                <%if(posts[p].image){%>
+                <img src="<%=posts[p].image%>" />
+                    <%}%>
+                <p><%=posts[p].content%></p>
+            </div>
+            
+             <form action="/posts/<%=posts[p].id%>/?method=delete" method="POST">
+                 <input type="submit" value="Delete" />
+             </form>
+             <form action="/posts/<%=posts[p].id%>/edit" method="GET">
+                 <input type="submit" value="Modify" />
+                 <input type="hidden" value="<%=posts[p].title%>" name="title"/>
+                 <input type="hidden" value="<%=posts[p].image%>" name="image"/>
+                 <input type="hidden" value="<%=posts[p].content%>" name="content"/>
+             </form>
+        </div>
+        <% if(p!==posts.length-1){%>
+           <hr class="list-separator" />
+        <%}%>
+    <%}%>
+<%}%>
+
+<% include partials/footer.ejs %>
